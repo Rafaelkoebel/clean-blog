@@ -20,13 +20,13 @@
                     <!-- Post preview-->
                     <div class="post-preview">
                         <a href="post.html">
-                            <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-                            <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
+                            <h2 class="post-title"><?= $title_art_1?></h2>
+                            <h3 class="post-subtitle"><?= $subtitle_art_1?></h3>
                         </a>
                         <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on September 24, 2021
+                            Posté par
+                            <a href="#!"><?= $auteur_art_1?></a>
+                            le <?= $date_art_1?>
                         </p>
                     </div>
                     <!-- Divider-->
