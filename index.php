@@ -1,9 +1,7 @@
 <?php
     include("model/home.model.php");
-?>
+    
+    $layout_title= $title; 
 
-<?php $layout_title= $title; ?>
-
-<?php
     include("view/home.view.php");
 ?>
