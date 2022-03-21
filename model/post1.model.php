@@ -23,4 +23,10 @@
         $subtitle="Partie intégrante de la culture hawaïenne";
         $content="article3";
     }
+    else{
+        $bg="assets/img/erreur.png";
+        $title="Erreur";
+        $subtitle="Une erreur est survenue";
+        $content="";
+    }
 ?>
