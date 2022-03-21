@@ -5,5 +5,5 @@
     $title_art_1="Planche de surf";
     $subtitle_art_1="Comment bien la choisir";
     $auteur_art_1="Philippe G";
-    $date_art_1="17 Mars 2022";
+    $date_art_1="21 Mars 2022";
 ?>
