@@ -5,7 +5,7 @@ try{
         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES " . DB_CHARSET,
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
     $pdo = new PDO( $dns, DB_USER, DB_PASSWORD, $options );
-    echo "Connection établie";
+    //echo "Connection établie";
 }
 catch ( Exception $e ){
     die("Connection à Mysql impossible : " . $e->getMessage());
