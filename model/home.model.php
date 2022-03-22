@@ -5,13 +5,14 @@
     
     try{
         $query = "
-        SELECT post_date, LEFT(post_content, " . TRONCATURE . ") AS post_content, post_title, display_name, cat_descr
+        SELECT post_ID, post_date, LEFT(post_content, " . TRONCATURE . ") AS post_content, post_title, display_name, cat_descr
         FROM `blog_posts`
         JOIN blog_users
         ON blog_posts.post_author=blog_users.ID
         JOIN blog_categories
-        ON blog_categories.cat_id=blog_posts.post_category";
-        
+        ON blog_categories.cat_id=blog_posts.post_category
+        ORDER BY post_date DESC";
+
         $req = $pdo->query($query);
         //echo "Connection établie";
         /* while($data = $req->fetch()){
