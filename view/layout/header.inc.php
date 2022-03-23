@@ -5,9 +5,9 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
                             <h1>
-                            <?= $title ?>
+                            <?= $header_title ?>
                             </h1>
-                            <span class="subheading"><?= $subtitle ?></span>
+                            <span class="subheading"><?= $header_subtitle ?></span>
                         </div>
                     </div>
                 </div>

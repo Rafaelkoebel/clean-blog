@@ -1,5 +1,5 @@
 <?php 
     $bg="assets/img/contact-bg.jpg";
-    $title="Blog de surf";
-    $subtitle="Comment pourvoir ?";
+    $header_title="Blog de surf";
+    $header_subtitle="Comment pourvoir faire du surf ?";
 ?>

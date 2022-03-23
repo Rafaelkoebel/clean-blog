@@ -4,7 +4,7 @@
 
     try{
         $query = "
-        SELECT post_date, post_content, post_title, display_name, cat_descr
+        SELECT post_date, post_content, post_title, post_img_url, display_name, cat_descr
         FROM `blog_posts`
         JOIN blog_users
         ON blog_posts.post_author=blog_users.ID
