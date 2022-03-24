@@ -13,7 +13,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+                        <p>Vous voulez entrer en contact ? Remplissez le formulaire ci-dessous pour m'envoyer un message et je vous répondrai dans les plus brefs délais !</p>
                         <div class="my-5">
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -22,25 +22,25 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form id="contactForm" action="contact.add.php">
+                            <form id="contactForm" action="contact.add.php" method="post">
                                 <div class="form-floating">
-                                    <input class="form-control" id="name" name="name" type="text" placeholder="Enter votre nom..." data-sb-validations="required" />
+                                    <input class="form-control" id="name" name="name" type="text" placeholder="Enter votre nom..."  required maxlength="25" />
                                     <label for="name">Nom</label>
                                     <div class="invalid-feedback" data-sb-feedback="name:required">Le nom est obligatoire.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input class="form-control" id="email" name="email" type="email" placeholder="Enter votre email..." data-sb-validations="required,email" />
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="Enter votre email..." required />
                                     <label for="email">Email</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">L'email est obligatoire.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">L'email n'est pas valide.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="Enter votre numero de tel..." data-sb-validations="required" />
+                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="Enter votre numero de tel..." required pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" />
                                     <label for="phone">Numero tel</label>
                                     <div class="invalid-feedback" data-sb-feedback="phone:required">Le tel est obligatoire.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Enter votre message..." style="height: 12rem" data-sb-validations="required"></textarea>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Enter votre message..." style="height: 12rem" required ></textarea>
                                     <label for="message">Message</label>
                                     <div class="invalid-feedback" data-sb-feedback="message:required">Le message est obligatoire.</div>
                                 </div>

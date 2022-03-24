@@ -5,7 +5,7 @@
     /* echo($_GET['article']); */
 
     //ce controler doit recevoir un parametre article
-    if (!isset($GET["article"])){
+    if (!isset($_GET["article"])){
         var_dump("manque param");
     }
 
