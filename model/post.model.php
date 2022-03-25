@@ -3,7 +3,10 @@
     include("model/pdo.inc.php");
 
     try{
-        $query = "
+        //requete non préparée
+
+
+        /* $query = "
         SELECT post_date, post_content, post_title, post_img_url, display_name, cat_descr
         FROM `blog_posts`
         JOIN blog_users
@@ -12,14 +15,37 @@
         ON blog_categories.cat_id=blog_posts.post_category
         WHERE post_ID = " . $_GET["article"];
 
-        $req = $pdo->query($query);
+        $req = $pdo->query($query); */
+        //$data = $req->fetch();
+
+        //requete preparée
+
+        $query = "
+        SELECT post_date, post_content, post_title, post_img_url, display_name, cat_descr
+        FROM `blog_posts`
+        JOIN blog_users
+        ON blog_posts.post_author=blog_users.ID
+        JOIN blog_categories
+        ON blog_categories.cat_id=blog_posts.post_category
+        WHERE post_ID = :article";
+
+        $curseur = $pdo->prepare($query);
+        $curseur->bindValue(':article', $_GET["article"], PDO::PARAM_INT);
+
+        $curseur->execute();
+
+        $curseur->setFetchMode(PDO::FETCH_ASSOC);
+        $data = $curseur->fetch();
+
+        var_dump($data);
+        exit;
         //echo "Connection établie";
         /* while($data = $req->fetch()){
             var_dump($data);
         }
         $req->closeCursor(); */
 
-        $data = $req->fetch();
+        
         //var_dump($data);
     }
     catch(Exception $e){
