@@ -37,16 +37,8 @@
         $curseur->setFetchMode(PDO::FETCH_ASSOC);
         $data = $curseur->fetch();
 
-        var_dump($data);
-        exit;
-        //echo "Connection établie";
-        /* while($data = $req->fetch()){
-            var_dump($data);
-        }
-        $req->closeCursor(); */
-
-        
-        //var_dump($data);
+        /* var_dump($data);
+        exit; */
     }
     catch(Exception $e){
         die("erreur mysql : " . $e->getMessage());
